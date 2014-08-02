@@ -1,12 +1,12 @@
 Marionette.SortableCollectionView
 =================================
 
-`Marionette.SortableCollectionView` is a sortable `Marionette.CollectionView` powered by [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
+A sortable Marionette.CollectionView powered by [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
 
 Requirements
 ------------
 
-- Marionette.js
+- [Marionette.js](http://marionettejs.com/)
 - [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
 
 Usage
