@@ -1,3 +1,9 @@
+// Marionette.SortableCollectionView
+//
+// Copyright (c) 2014 orangain
+// Distributed under MIT License
+// https://github.com/orangain/marionette-sortable
+
 var Sortable = Marionette.Behavior.extend({
 
   events: {
