@@ -1,0 +1,14 @@
+#main {
+	width: 50%;
+	float: left;
+}
+
+#side {
+	width: 50%;
+	float: right;
+}
+
+#debug {
+	width: 100%;
+	height: 500px;
+}

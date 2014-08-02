@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sample of Marionette.SortableCollectionView with HTML5 Sortable</title>
+		<link rel="stylesheet" href="screen.css">
+	</head>
+	<body>
+		<h1>Sample of Marionette.SortableCollectionView with HTML5 Sortable</h1>
+		<div id="main">
+			<p>Drag and drop list items:</p>
+			<ul id="list"></ul>
+			<button id="button-add">Add Orange</button>
+		</div>
+		<div id="side">
+			<h3>Result of Collection.toJSON():</h3>
+			<textarea id="debug" readonly></textarea>
+		</div>
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5sortable/0.1.1/html.sortable.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.0.3/backbone.marionette.min.js"></script>
+		<script src="../marionette.sortable.js"></script>
+		<script type="text/template" id="fruit_template">
+			Name: <%- name %>
+		</script>
+		<script src="html5-sortable.js"></script>
+	</body>
+</html>
