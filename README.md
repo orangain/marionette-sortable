@@ -1,5 +1,5 @@
-Marionette.SortableCollectionView
-=================================
+Marionette Sortable
+===================
 
 A sortable Marionette.CollectionView powered by [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
 
@@ -18,13 +18,14 @@ Demo
 Usage
 -----
 
-Load `marionette.sortable.js`.
+Load `marionette.sortable.js` and other dependencies.
 
 ```html
 <script src="marionette.sortable.js"></script>
 ```
 
 Extend your CollectionView from `Marionette.SortableCollectionView`.
+Note that `html5sortable: true` is required when using HTML5 Sortable.
 
 ```js
 var YourCollectionView = Marionette.SortableCollectionView.extend({
@@ -41,8 +42,9 @@ var YourCollectionView = Marionette.SortableCollectionView.extend({
 
 ### As a Behavior (mixin)
 
-Marionette.SortableCollectionView also provides `Sortable` Behavior.
-This enable you to add `Sortable` behavior to any `Marionette.CollectionView`s without inheriting `Marionette.SortableCollectionView`.
+Marionette Sortable also provides `Marionette.SortableBehavior`.
+This enable you to make sortable any `Marionette.CollectionView`s without inheriting `Marionette.SortableCollectionView`.
+Note that `html5sortable: true` is required when using HTML5 Sortable.
 
 ```js
 var YourCollectionView = Marionette.CollectionView.extend({
@@ -51,7 +53,7 @@ var YourCollectionView = Marionette.CollectionView.extend({
 
   behaviors: {
     Sortable: {
-      behaviorClass: Sortable,
+      behaviorClass: Marionette.SortableBehavior,
       html5sortable: true // Required when using HTML5 Sortable.
     }
   }
