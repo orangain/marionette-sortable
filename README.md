@@ -3,17 +3,17 @@ Marionette Sortable
 
 A sortable Marionette.CollectionView powered by [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
 
-Requirements
-------------
-
-- [Marionette.js](http://marionettejs.com/)
-- [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
-
 Demo
 ----
 
 - [with jQuery UI Sortable](http://orangain.github.io/marionette-sortable/sample/jquery-ui-sortable.html)
 - [with HTML5 Sortable](http://orangain.github.io/marionette-sortable/sample/html5-sortable.html)
+
+Requirements
+------------
+
+- [Marionette.js](http://marionettejs.com/)
+- [jQuery UI Sortable](http://jqueryui.com/sortable/) or [HTML5 Sortable](https://github.com/voidberg/html5sortable).
 
 Usage
 -----
