@@ -18,10 +18,10 @@ Demo
 Usage
 -----
 
-Load `marionette.sortable.js` and other dependencies.
+Load `marionette-sortable.js` and other dependencies.
 
 ```html
-<script src="marionette.sortable.js"></script>
+<script src="marionette-sortable.js"></script>
 ```
 
 Extend your CollectionView from `Marionette.SortableCollectionView`.
