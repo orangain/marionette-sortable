@@ -28,10 +28,10 @@
     },
 
     onSortUpdate: function(e, ui) {
-      var childElement = ui.item;
-      var newIndex = this.$el.children().index(childElement);
+      var $childElement = ui.item;
+      var newIndex = $childElement.parent().children().index($childElement);
       var collection = this.view.collection;
-      var model = collection.get(childElement.attr('data-model-cid'));
+      var model = collection.get($childElement.attr('data-model-cid'));
       // do not use silent to notify other obversers.
       collection.remove(model);
       collection.add(model, {at: newIndex});
@@ -42,13 +42,26 @@
       delete options.behaviorClass;
       delete options.html5sortable;
 
-      this.$el.sortable(options); // options are passed to the sortable
+      this.getChildViewContainer().sortable(options); // options are passed to the sortable
     },
 
     onAddChild: function(view) {
       view.$el.attr('data-model-cid', view.model.cid);
       if (this.options.html5sortable) {
-        this.$el.sortable('reload');
+        this.getChildViewContainer().sortable('reload');
+      }
+    },
+
+    getChildViewContainer: function() {
+      if (typeof this.view.getChildViewContainer == 'function') {
+        // CompositeView
+        return this.view.getChildViewContainer(this.view);
+      } else if (typeof this.view.getItemViewContainer == 'function') {
+        // CompositeView for Marionttte 1.x
+        return this.view.getItemViewContainer(this.view);
+      } else {
+        // CollectionView
+        return this.$el;
       }
     }
 
