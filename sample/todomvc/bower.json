@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "jquery": "~1.10.2",
+    "jquery-ui": "~1.11.1",
     "todomvc-common": "~0.1.7",
-    "underscore": "~1.4.4",
+    "underscore": "~1.6.0",
     "backbone.localStorage": "~1.1.6",
     "backbone.marionette": "~2.1.0"
   }
