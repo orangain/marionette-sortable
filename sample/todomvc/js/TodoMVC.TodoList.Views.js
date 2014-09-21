@@ -98,6 +98,12 @@ TodoMVC.module('TodoList.Views', function (Views, App, Backbone, Marionette, $) 
 			'all': 'update'
 		},
 
+		behaviors: {
+			Sortable: {
+				behaviorClass: Backbone.Marionette.SortableBehavior
+			}
+		},
+
 		initialize: function () {
 			this.listenTo(App.request('filterState'), 'change:filter', this.render, this);
 		},
