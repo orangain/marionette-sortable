@@ -53,7 +53,7 @@ TodoMVC.module('Todos', function (Todos, App, Backbone) {
 			return this.reject(this._isCompleted);
 		},
 
-		comparator: 'created',
+		comparator: 'order',
 
 		_isCompleted: function (todo) {
 			return todo.isCompleted();

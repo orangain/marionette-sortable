@@ -106,6 +106,16 @@ TodoMVC.module('TodoList.Views', function (Views, App, Backbone, Marionette, $) 
 
 		initialize: function () {
 			this.listenTo(App.request('filterState'), 'change:filter', this.render, this);
+			this.listenTo(App.request('filterState'), 'change:filter', this.switchSortable, this);
+		},
+
+		switchSortable: function() {
+			// Sort is allowed only in "All" view
+			if (App.request('filterState').get('filter') == 'all') {
+				$(this.getChildViewContainer(this)).sortable('enable');
+			} else {
+				$(this.getChildViewContainer(this)).sortable('disable');
+			}
 		},
 
 		addChild: function (child) {
@@ -121,6 +131,16 @@ TodoMVC.module('TodoList.Views', function (Views, App, Backbone, Marionette, $) 
 		},
 
 		update: function () {
+			if (App.request('filterState').get('filter') == 'all') {
+				// Persist the order of items
+				this.collection.each(function(item, i) {
+					if (item.get('order') !== i) {
+						item.set('order', i);
+						item.save();
+					}
+				});
+			}
+
 			function reduceCompleted(left, right) {
 				return left && right.get('completed');
 			}

@@ -23,7 +23,8 @@ TodoMVC.module('Layout', function (Layout, App, Backbone) {
 
 			if (e.which === ENTER_KEY && todoText) {
 				this.collection.create({
-					title: todoText
+					title: todoText,
+					order: this.collection.length
 				});
 				this.ui.input.val('');
 			}
