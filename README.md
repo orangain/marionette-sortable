@@ -6,8 +6,12 @@ A sortable Marionette.CollectionView powered by [jQuery UI Sortable](http://jque
 Demo
 ----
 
-- [with jQuery UI Sortable](http://orangain.github.io/marionette-sortable/sample/jquery-ui-sortable.html)
-- [with HTML5 Sortable](http://orangain.github.io/marionette-sortable/sample/html5-sortable.html)
+- [CollectionView with jQuery UI Sortable](http://orangain.github.io/marionette-sortable/sample/jquery-ui-sortable.html)
+  * [Source](https://github.com/orangain/marionette-sortable/tree/master/sample)
+- [CollectionView with HTML5 Sortable](http://orangain.github.io/marionette-sortable/sample/html5-sortable.html)
+  * [Source](https://github.com/orangain/marionette-sortable/tree/master/sample)
+- [CompositeView with jQuery UI Sortable](http://orangain.github.io/marionette-sortable/sample/todomvc/)
+  * [Source](https://github.com/orangain/marionette-sortable/tree/master/sample/todomvc)
 
 Requirements
 ------------
